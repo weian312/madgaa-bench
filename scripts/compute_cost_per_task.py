@@ -33,15 +33,20 @@ OUT.mkdir(exist_ok=True)
 # can recompute with their own assumptions.
 COST_ASSUMPTIONS = {
     "macmini-m4-32gb": {
-        "hw_price_ntd": 36900,           # MacBook Air M4 32GB used as Mac mini surrogate (same M4, same 120 GB/s bandwidth)
+        # Recommended config for readers: Mac mini M4 Pro 48GB 273 GB/s.
+        # Test was on MacBook Air M4 32GB 120 GB/s (proxy for M4 base).
+        # We attribute cost using the recommended hardware price + measured
+        # 32GB e2e timings. M4 Pro real perf expected ~2x faster -> per-task
+        # NT$ in the article is conservatively high.
+        "hw_price_ntd": 54900,           # Mac mini M4 Pro 48GB list (Taiwan, 2026-05)
         "amortise_years": 5,
-        "active_hours_per_year": 2000,   # workstation usage: 8h/d × 250d
+        "active_hours_per_year": 8760,   # 24/7: hardware depreciates whether on or off
         "power_watts": 30,               # M4 sustained ~30W during inference
         "electricity_ntd_per_kwh": 3.0,  # rough Taiwan retail (residential)
         "datacentre_overhead_factor": 0.0,  # at-desk, no extra cooling
     },
     "h200-nvl-server": {
-        "hw_price_ntd": 1_500_000,       # 1× H200 NVL ~NT$950k + dual-EPYC server NT$550k (2026 list, no rack)
+        "hw_price_ntd": 1_500_000,       # 1x H200 NVL ~NT$950k + dual-EPYC server NT$550k (2026 list, no rack)
         "amortise_years": 5,
         "active_hours_per_year": 8760,   # server: 24/7
         "power_watts": 1500,             # H200 ~700W typical + CPU+RAM = ~1.5 kW under load

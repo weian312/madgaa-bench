@@ -130,7 +130,7 @@ def fig_e2e_per_task(rows: list[dict]) -> None:
     x = list(range(len(TASKS)))
     seen = []
     for hw_idx, hw in enumerate(["macmini-m4-32gb", "h200-nvl"]):
-        for m_idx, model in enumerate(["qwen3.6-35b-a3b", "medgemma-27b-text-it"]):
+        for m_idx, model in enumerate(["Qwen 3.6 35B-A3B", "MedGemma 27B"]):
             heights = []
             for t in TASKS:
                 v = next(
@@ -171,7 +171,7 @@ def fig_cost_per_task(rows: list[dict]) -> None:
     bw = 0.18
     x = list(range(len(TASKS)))
     for hw_idx, hw in enumerate(["macmini-m4-32gb", "h200-nvl"]):
-        for m_idx, model in enumerate(["qwen3.6-35b-a3b", "medgemma-27b-text-it"]):
+        for m_idx, model in enumerate(["Qwen 3.6 35B-A3B", "MedGemma 27B"]):
             heights = []
             for t in TASKS:
                 v = next(
@@ -245,7 +245,7 @@ def fig_break_even(rows: list[dict]) -> None:
     - Assume H200 can serve C concurrent users: effective per-task cost = cost_h200 / C
     - Break-even at C* = cost_h200 / cost_mac
     """
-    soap = [r for r in rows if r["task_id"] == "soap_en" and "qwen" in r["model"].lower()]
+    soap = [r for r in rows if r["task_id"] == "soap_en" and "qwen3.6" in r["model"].lower()]
     mac = next((r for r in soap if r["hardware"].startswith("mac")), None)
     h200 = next((r for r in soap if r["hardware"].startswith("h200")), None)
     if not mac or not h200:
@@ -286,7 +286,7 @@ def fig_output_size_consistency(rows: list[dict]) -> None:
     bw = 0.18
     x = list(range(len(TASKS)))
     for hw_idx, hw in enumerate(["macmini-m4-32gb", "h200-nvl"]):
-        for m_idx, model in enumerate(["qwen3.6-35b-a3b", "medgemma-27b-text-it"]):
+        for m_idx, model in enumerate(["Qwen 3.6 35B-A3B", "MedGemma 27B"]):
             heights = []
             for t in TASKS:
                 v = next(
