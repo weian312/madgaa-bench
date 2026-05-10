@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Lump in the chest wall. Probably an old fracture of the area with callus formation, need to rule out the possibility of a tumor.
+
+CHIEF COMPLAINT:, Lump in the chest wall.,HISTORY OF PRESENT ILLNESS: , This is a 56-year-old white male who has been complaining of having had a lump in the chest for the past year or so and it has been getting larger and tender according to the patient. It is tender on palpation and also he feels like, when he takes a deep breath also, it hurts.,CHRONIC/INACTIVE CONDITIONS,1. Hypertension.,2. Hyperlipidemia.,3. Glucose intolerance.,4. Chronic obstructive pulmonary disease?,5. Tobacco abuse.,6. History of anal fistula.,ILLNESSES:, See above.,PREVIOUS OPERATIONS: , Anal fistulectomy, incision and drainage of perirectal abscess, hand surgery, colonoscopy, arm nerve surgery, and back surgery.,PREVIOUS INJURIES: , He had a broken ankle in the past.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

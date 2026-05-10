@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Complete eye examination - Normal eye and vision exam.
+
+CHIEF COMPLAINT:, This 26-year-old male presents today for a complete eye examination.,ALLERGIES:, Patient admits allergies to aspirin resulting in disorientation, GI upset.,MEDICATION HISTORY:, Patient is currently taking amoxicillin-clavulanate 125 mg-31.25 mg tablet, chewable medication was prescribed by A. General Practitioner MD, Adrenocot 0.5 mg tablet medication was prescribed by A. General Practitioner MD, Vioxx 12.5 mg tablet (BID).,PMH: , Past medical history is unremarkable.,PAST SURGICAL HISTORY:, Patient admits past surgical history of (+) appendectomy in 1989.,SOCIAL HISTORY:, Patient denies alcohol use. Patient denies illegal drug use. Patient denies STD history. Patient denies tobacco use.,FAMILY HISTORY:, Unremarkable.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

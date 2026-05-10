@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Electroencephalographic findings and interpretation
+
+HISTORY:, This is a digital EEG performed on a 75-year-old male with seizures.,BACKGROUND ACTIVITY:, The background activity consists of a 8 Hz to 9 Hz rhythm arising in the posterior head region. This rhythm is also accompanied by some beta activity which occurs infrequently. There are also muscle contractions occurring at 4 Hz to 5 Hz which suggests possible Parkinson's. Part of the EEG is obscured by the muscle contraction artifact. There are also left temporal sharps occurring infrequently during the tracing. At one point of time, there was some slowing occurring in the right frontal head region.,ACTIVATION PROCEDURES:, Photic stimulation was performed and did not show any significant abnormality.,SLEEP PATTERNS:, No sleep architecture was observed during this tracing.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

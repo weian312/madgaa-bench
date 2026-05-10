@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+A 3-year-old female for evaluation of chronic ear infections bilateral - OM (otitis media), suppurative without spontaneous rupture. Adenoid hyperplasia bilateral.
+
+CHIEF COMPLAINT:, This 3-year-old female presents today for evaluation of chronic ear infections bilateral.,ASSOCIATED SIGNS AND SYMPTOMS FOR OTITIS MEDIA: , Associated signs and symptoms include: cough, fever, irritability and speech and language delay. Duration (ENT): Duration of symptom: 12 rounds of antibiotics for otitis media. Quality of ear problems: Quality of the pain is throbbing.,ALLERGIES: , No known medical allergies.,MEDICATIONS:, None currently.,PMH:, Past medical history is unremarkable.,PSH: , No previous surgeries.,SOCIAL HISTORY:, Parent admits child is in a large daycare.,FAMILY HISTORY:, Parent admits a family history of Alzheimer's disease associated with paternal grandmother.,ROS:, Unremarkable with exception of chief complaint.,PHYSICAL EXAM:, Temp: 99.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

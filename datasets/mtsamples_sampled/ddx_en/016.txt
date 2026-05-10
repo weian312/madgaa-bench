@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Left mesothelioma, focal. Left anterior pleural-based nodule, which was on a thin pleural pedicle with no invasion into the chest wall.
+
+PREOPERATIVE DIAGNOSIS: , Left mesothelioma, focal.,POSTOPERATIVE DIAGNOSIS: , Left pleural-based nodule.,PROCEDURES PERFORMED:,1. Left thoracoscopy.,2. Left mini thoracotomy with resection of left pleural-based mass.,FINDINGS:, Left anterior pleural-based nodule, which was on a thin pleural pedicle with no invasion into the chest wall.,FLUIDS: , 800 mL of crystalloid.,ESTIMATED BLOOD LOSS: , Minimal.,DRAINS, TUBES, CATHETERS: , 24-French chest tube in the left thorax plus Foley catheter.,SPECIMENS: , Left pleural-based nodule.,INDICATION FOR OPERATION: ,The patient is a 59-year-old female with previous history of follicular thyroid cancer, approximately 40 years ago, status post resection with recurrence in the 1980s, who had a left pleural-based mass identified on chest x-ray.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

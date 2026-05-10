@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+The patient is an 84-year-old man who returns for revaluation of possible idiopathic normal pressure hydrocephalus.
+
+REASON FOR VISIT: , The patient is an 84-year-old man who returns for revaluation of possible idiopathic normal pressure hydrocephalus. He is accompanied by his wife and daughter.,HISTORY OF PRESENT ILLNESS:, I first saw him nearly a year ago on December 20, 2007. At that time, he had had a traumatic deterioration over the course of approximately eight months. This included severe cognitive impairment, gait impairment, and incontinence. He had actually been evaluated at Hospital with CSF drainage via a temporary spinal catheter, but there was no response that was noted. When I saw him, there were findings consistent with cervical stenosis and I ordered an MRI scan of the cervical spine. I subsequently referred him to Dr.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

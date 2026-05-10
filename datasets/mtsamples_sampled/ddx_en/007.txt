@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+CT scan of the abdomen and pelvis with contrast to evaluate abdominal pan.
+
+EXAM: , CT scan of the abdomen and pelvis with contrast.,REASON FOR EXAM: , Abdominal pain.,COMPARISON EXAM: , None.,TECHNIQUE: , Multiple axial images of the abdomen and pelvis were obtained. 5-mm slices were acquired after injection of 125 cc of Omnipaque IV. In addition, oral ReadiCAT was given. Reformatted sagittal and coronal images were obtained.,DISCUSSION:, There are numerous subcentimeter nodules seen within the lung bases. The largest measures up to 6 mm. No hiatal hernia is identified. Consider chest CT for further evaluation of the pulmonary nodules. The liver, gallbladder, pancreas, spleen, adrenal glands, and kidneys are within normal limits. No dilated loops of bowel.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

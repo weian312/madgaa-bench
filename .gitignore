@@ -6,3 +6,4 @@ __pycache__/
 .venv/
 *.tar.gz
 article/article_filled*.md
+datasets/mtsamples.csv

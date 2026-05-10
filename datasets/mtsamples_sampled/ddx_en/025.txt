@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Patient has had multiple problems with his teeth due to extensive dental disease and has had many of his teeth pulled, now complains of new tooth pain to both upper and lower teeth on the left side for approximately three days..
+
+CHIEF COMPLAINT:, Toothache.,HISTORY OF PRESENT ILLNESS: ,This is a 29-year-old male who has had multiple problems with his teeth due to extensive dental disease and has had many of his teeth pulled. Complains of new tooth pain. The patient states his current toothache is to both upper and lower teeth on the left side for approximately three days. The patient states that he would have gone to see his regular dentist but he has missed so many appointments that they now do not allow him to schedule regular appointments, he has to be on standby appointments only. The patient denies any other problems or complaints. The patient denies any recent illness or injuries.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

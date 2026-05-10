@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Subxiphoid pericardial window. A #10-blade scalpel was used to make an incision in the area of the xiphoid process. Dissection was carried down to the level of the fascia using Bovie electrocautery.
+
+OPERATION: , Subxiphoid pericardial window.,ANESTHESIA: , General endotracheal anesthesia.,OPERATIVE PROCEDURE IN DETAIL: ,After obtaining informed consent from the patient's family, including a thorough explanation of the risks and benefits of the aforementioned procedure, patient was taken to the operating room and general endotracheal anesthesia was administered. Next, the neck and chest were prepped and draped in the standard surgical fashion. A #10-blade scalpel was used to make an incision in the area of the xiphoid process. Dissection was carried down to the level of the fascia using Bovie electrocautery. The xiphoid process was elevated, and the diaphragmatic attachments to it were dissected free. Next the pericardium was identified.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

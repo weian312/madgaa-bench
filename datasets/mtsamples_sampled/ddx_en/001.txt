@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Patient had a recurrent left arm pain after her stent, three days ago, and this persisted after two sublingual nitroglycerin.
+
+HISTORY OF PRESENT ILLNESS: , The patient is a 68-year-old woman whom I have been following, who has had angina. In any case today, she called me because she had a recurrent left arm pain after her stent, three days ago, and this persisted after two sublingual nitroglycerin when I spoke to her. I advised her to call 911, which she did. While waiting for 911, she was attended to by a physician who is her neighbor and he advised her to take the third nitroglycerin and that apparently relieved her pain. By the time she presented here, she is currently pain-free and is feeling well.,PAST CARDIAC HISTORY: , The patient has been having arm pain for several months.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

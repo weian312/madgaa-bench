@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Bronchoscopy for hypoxia and increasing pulmonary secretions
+
+PREOPERATIVE DIAGNOSIS: , Hypoxia and increasing pulmonary secretions.,POSTOPERATIVE DIAGNOSIS: , Hypoxia and increasing pulmonary secretions.,OPERATION: , Bronchoscopy.,ANESTHESIA: , Moderate bedside sedation.,COMPLICATIONS:, None.,FINDINGS:, Abundant amount of clear thick secretions throughout the main airways.,INDICATIONS:, The patient is a 43-year-old gentleman who has been in the ICU for several days following resection of small bowel for sequelae of SMV occlusion. This morning, the patient developed worsening hypoxia with abundant sputum production requiring frequent suctioning from his ET tube. The patient also had new-appearing atelectasis versus infiltrates in the right lower lobe of his lung on chest x-ray.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

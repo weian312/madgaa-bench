@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+EGD and colonoscopy. Blood loss anemia, normal colon with no evidence of bleeding, hiatal hernia, fundal gastritis with polyps, and antral mass.
+
+PREOPERATIVE DIAGNOSIS: , Blood loss anemia.,POSTOPERATIVE DIAGNOSES:,1. Normal colon with no evidence of bleeding.,2. Hiatal hernia.,3. Fundal gastritis with polyps.,4. Antral mass.,ANESTHESIA: , Conscious sedation with Demerol and Versed.,SPECIMEN: ,Antrum and fundal polyps.,HISTORY: , The patient is a 66-year-old African-American female who presented to ABCD Hospital with mental status changes. She has been anemic as well with no gross evidence of blood loss. She has had a decreased appetite with weight loss greater than 20 lb over the past few months. After discussion with the patient and her daughter, she was scheduled for EGD and colonoscopy for evaluation.,PROCEDURE: , After informed consent was obtained, the patient was brought to the endoscopy suite.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

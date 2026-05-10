@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Low back pain, lumbar radiculopathy, degenerative disc disease, lumbar spinal stenosis, history of anemia, high cholesterol, and hypothyroidism.
+
+FAMILY HISTORY:, Her father died from leukemia. Her mother died from kidney and heart failure. She has two brothers; five sisters, one with breast cancer; two sons; and a daughter. She describes cancer, hypertension, nervous condition, kidney disease, high cholesterol, and depression in her family.,SOCIAL HISTORY:, She is divorced. She does not have support at home. She denies tobacco, alcohol, and illicit drug use.,ALLERGIES: , Hypaque dye when she had x-rays for her kidneys.,MEDICATIONS: , Prempro q.d., Levoxyl 75 mcg q.d., Lexapro 20 mg q.d., Fiorinal as needed, currently she is taking it three times a day, and aspirin as needed. She also takes various supplements including multivitamin q.d., calcium with vitamin D b.i.d., magnesium b.i.d., Ester-C b.i.d., vitamin E b.i.d.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

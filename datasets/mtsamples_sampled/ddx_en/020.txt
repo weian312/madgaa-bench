@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Echocardiogram for aortic stenosis. Transthoracic echocardiogram was performed of adequate technical quality. Concentric hypertrophy of the left ventricle with normal function. Doppler study as above, most pronounced being moderate aortic stenosis, valve area of 1.1 sq. cm
+
+EXAM:, Echocardiogram.,INDICATION: , Aortic stenosis.,INTERPRETATION: , Transthoracic echocardiogram was performed of adequate technical quality. Left ventricle reveals concentric hypertrophy with normal size and dimensions and normal function. Ejection fraction is 60% without any obvious wall motion abnormality. Left atrium and right side chambers are of normal size and dimensions. Aortic root has normal diameter.,Mitral and tricuspid valves are structurally normal except for minimal annular calcification. Valvular leaflet excursion is adequate. Aortic valve reveals annular calcification. Fibrocalcific valve leaflets with decreased excursion. Atrial and ventricular septum are intact. Pericardium is intact without any effusion. No obvious intracardiac mass or thrombi noted.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

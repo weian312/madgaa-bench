@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+The patient is admitted on a 72-hour involuntary treatment for dangerousness to others after repeated assaultive behaviors at Hospital Emergency Room, the morning prior to admission.
+
+IDENTIFYING DATA: ,The patient is a 40-year-old white male. He is married, on medical leave from his job as a tree cutter, and lives with his wife and five children.,CHIEF COMPLAINT AND REACTION TO HOSPITALIZATION: ,The patient is admitted on a 72-hour involuntary treatment for dangerousness to others after repeated assaultive behaviors at Hospital Emergency Room, the morning prior to admission.,HISTORY OF PRESENT ILLNESS: ,The patient was very sleepy this morning, only minimally cooperative with interview. Additional information taken from the emergency room records that accompanied him from Hospital yesterday as well as from his wife, who I contacted by telephone.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

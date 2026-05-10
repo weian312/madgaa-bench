@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Total colonoscopy with biopsy and snare polypectomy.
+
+PREOPERATIVE DIAGNOSIS:, Alternating hard and soft stools.,POSTOPERATIVE DIAGNOSIS:,Sigmoid diverticulosis.,Sessile polyp of the sigmoid colon.,Pedunculated polyp of the sigmoid colon.,PROCEDURE: , Total colonoscopy with biopsy and snare polypectomy.,PREP:, 4/4.,DIFFICULTY:, 1/4.,PREMEDICATION AND SEDATION: , Fentanyl 100, midazolam 5.,INDICATION FOR PROCEDURE:, A 64-year-old male who has developed alternating hard and soft stools. He has one bowel movement a day.,FINDINGS: , There is extensive sigmoid diverticulosis, without evidence of inflammation or bleeding. There was a small, sessile polyp in the sigmoid colon, and a larger pedunculated polyp in the sigmoid colon, both appeared adenomatous.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

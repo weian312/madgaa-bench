@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Elevated BNP. Diastolic heart failure, not contributing to his present problem. Chest x-ray and CAT scan shows possible pneumonia. The patient denies any prior history of coronary artery disease but has a history of hypertension.
+
+REASON FOR REFERRAL: , Elevated BNP.,HISTORY OF PRESENT ILLNESS:, The patient is a 95-year-old Caucasian male visiting from out of state, admitted because of the fall and could not get up and has a cough with dark color sputum, now admitted with pneumonia and a fall and the patient's BNP level was high, for which Cardiology consult was requested. The patient denies any chest pain or shortness of breath. Chest x-ray and CAT scan shows possible pneumonia. The patient denies any prior history of coronary artery disease but has a history of hypertension.,ALLERGIES: , No known drug allergies.,MEDICATIONS:, At this time, he is on:,1. Atrovent and albuterol nebulizers.,2. Azithromycin.,3. Potassium chloride 10 mEq p.o. daily.,4. Furosemide 20 mg IV daily.,5. Enoxaparin 40 mg daily.,6.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

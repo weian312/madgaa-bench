@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Aortic stenosis. Insertion of a Toronto stentless porcine valve, cardiopulmonary bypass, and cold cardioplegia arrest of the heart.
+
+PREOPERATIVE DIAGNOSIS:, Aortic stenosis.,POSTOPERATIVE DIAGNOSIS: ,Aortic stenosis.,PROCEDURES PERFORMED,1. Insertion of a **-mm Toronto stentless porcine valve.,2. Cardiopulmonary bypass.,3. Cold cardioplegia arrest of the heart.,ANESTHESIA: , General endotracheal anesthesia.,ESTIMATED BLOOD LOSS: , 300 cc.,INTRAVENOUS FLUIDS: , 1200 cc of crystalloid.,URINE OUTPUT: , 250 cc.,AORTIC CROSS-CLAMP TIME: , **,CARDIOPULMONARY BYPASS TIME TOTAL: , **,PROCEDURE IN DETAIL:, After obtaining informed consent from the patient, including a thorough explanation of the risks and benefits of the aforementioned procedure, patient was taken to the operating room and general endotracheal anesthesia was administered. Next the neck, chest and legs were prepped and draped in the standard surgical fashion.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

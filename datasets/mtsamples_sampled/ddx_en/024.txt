@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Chronic headaches and pulsatile tinnitus.
+
+HISTORY: , The patient is a 48-year-old female who was seen in consultation requested from Dr. X on 05/28/2008 regarding chronic headaches and pulsatile tinnitus. The patient reports she has been having daily headaches since 02/25/2008. She has been getting pulsations in the head with heartbeat sounds. Headaches are now averaging about three times per week. They are generally on the very top of the head according to the patient. Interestingly, she denies any previous significant history of headaches prior to this. There has been no nausea associated with the headaches. The patient does note that when she speaks on the phone, the left ear has "weird sounds." She feels a general fullness in the left ear. She does note pulsation sounds within that left ear only.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

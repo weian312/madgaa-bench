@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Possible CSF malignancy. This is an 83-year-old woman referred for diagnostic lumbar puncture for possible malignancy by Dr. X. The patient has gradually stopped walking even with her walker and her left arm has become gradually less functional. She is not able to use the walker because her left arm is so weak.
+
+REASON FOR VISIT: ,This is an 83-year-old woman referred for diagnostic lumbar puncture for possible malignancy by Dr. X. She is accompanied by her daughter.,HISTORY OF PRESENT ILLNESS:, The patient' daughter tells me that over the last month the patient has gradually stopped walking even with her walker and her left arm has become gradually less functional. She is not able to use the walker because her left arm is so weak. She has not been having any headaches. She has had a significant decrease in appetite. She is known to have lung cancer, but Ms. Wilson does not know what kind. According to her followup notes, it is presumed non-small cell lung cancer of the left upper lobe of the lung. The last note I have to evaluate is from October 2008.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

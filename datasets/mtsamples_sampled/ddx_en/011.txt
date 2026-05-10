@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Normal physical exam template. Normocephalic. Negative lesions, negative masses.
+
+GENERAL: ,XXX,VITAL SIGNS: , Blood pressure XXX, pulse XXX, temperature XXX, respirations XXX. Height XXX, weight XXX.,HEAD: , Normocephalic. Negative lesions, negative masses.,EYES: , PERLA, EOMI. Sclerae clear. Negative icterus, negative conjunctivitis.,ENT:, Negative nasal hemorrhages, negative nasal obstructions, negative nasal exudates. Negative ear obstructions, negative exudates. Negative inflammation in external auditory canals. Negative throat inflammation or masses.,SKIN: , Negative rashes, negative masses, negative ulcers. No tattoos.,NECK:, Negative palpable lymphadenopathy, negative palpable thyromegaly, negative bruits.,HEART:, Regular rate and rhythm. Negative rubs, negative gallops, negative murmurs.,LUNGS:, Clear to auscultation.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

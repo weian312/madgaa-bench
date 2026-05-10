@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Cervical spondylosis and kyphotic deformity. She had a nerve conduction study and a diagnosis of radiculopathy was made. She had an MRI of lumbosacral spine, which was within normal limits. She then developed a tingling sensation in the right middle toe.
+
+REASON FOR NEUROLOGICAL CONSULTATION: , Cervical spondylosis and kyphotic deformity. The patient was seen in conjunction with medical resident Dr. X. I personally obtained the history, performed examination, and generated the impression and plan.,HISTORY OF PRESENT ILLNESS: ,The patient is a 45-year-old African-American female whose symptoms first started some one and a half years ago with pain in the left shoulder and some neck pain. This has subsequently resolved. She started vigorous workouts in November 2005. In March of this year, she suddenly could not feel her right foot on the bathroom floor and subsequently went to her primary care physician. By her report, she had a nerve conduction study and a diagnosis of radiculopathy was made.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:

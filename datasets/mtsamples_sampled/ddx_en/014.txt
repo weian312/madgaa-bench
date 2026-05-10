@@ -1,0 +1,8 @@
+You are an attending physician on a consult service. Given the following case, list the top 5 most likely differential diagnoses ranked by probability. For each, give one line of reasoning grounded in the case findings. Output exactly 5 numbered items, no preamble.
+
+CASE:
+Left temporal craniotomy and removal of brain tumor.
+
+PREOPERATIVE DIAGNOSIS:, Brain tumor left temporal lobe.,POSTOPERATIVE DIAGNOSIS:, Brain tumor left temporal lobe - glioblastoma multiforme.,OPERATIVE PROCEDURE:,1. Left temporal craniotomy.,2. Removal of brain tumor.,OPERATING MICROSCOPE: , Stealth.,PROCEDURE: , The patient was placed in the supine position, shoulder roll, and the head was turned to the right side. The entire left scalp was prepped and draped in the usual fashion after having being placed in 2-point skeletal fixation. Next, we made an inverted-U fashion base over the asterion over temporoparietal area of the skull. A free flap was elevated after the scalp that was reflected using the burr hole and craniotome. The bone flap was placed aside and soaked in the bacitracin solution.
+
+TOP 5 DIFFERENTIAL DIAGNOSES:
