@@ -1,0 +1,157 @@
+# 一台 Mac mini 能不能取代一張 H200？我們在四個醫療任務上實測了
+
+> Madgaa Engineering · 2026-05 · 醫療 AI Efficiency 系列
+
+## TL;DR（30 秒版）
+
+| 任務 | Mac mini-class M4 32GB e2e | H200 NVL e2e | Mac/H200 速度比 | 兩端**每張任務硬體+電費**（NTD） |
+|---|---:|---:|---:|---:|
+| SOAP 摘要（英） | <span data-fill="mac_soap_e2e">_TBD_</span> | <span data-fill="h200_soap_e2e">_TBD_</span> | <span data-fill="mac_soap_ratio">_TBD_</span> | Mac <span data-fill="mac_soap_cost">_TBD_</span> / H200 <span data-fill="h200_soap_cost">_TBD_</span> |
+| DDx 推理（英） | _TBD_ | _TBD_ | _TBD_ | _TBD_ |
+| 用藥諮詢（中） | _TBD_ | _TBD_ | _TBD_ | _TBD_ |
+| ICD-10 編碼（中） | _TBD_ | _TBD_ | _TBD_ | _TBD_ |
+
+**一句話結論**：在「一個診間 / 一個醫師 / 一次一張病歷」的單人本地工作流，Mac mini class 的 Apple Silicon **比 H200 NVL 慢但便宜得多**——具體要慢幾倍、便宜幾倍，下面用實測數據填。 H200 真正划算的點是在**同時服務 N 個使用者**之後；break-even 大約在 <span data-fill="break_even">_TBD_</span> 個並行使用者。
+
+---
+
+## 為什麼寫這篇
+
+「我家診所要不要花錢買 H200」這個問題，過去半年我們被問了三次。每次都是同一句反問——你的工作量是多少？同時服務幾個醫師？回答從「就我一個人，看 outpatient 有 SOAP 摘要 + 鑑別診斷就夠了」到「我們是區域醫院，急診 + 病房 + 藥劑都接」都有，**對應的硬體建議差三個數量級**。
+
+這篇文章把那個反問拆開。我們在同一份硬體（Mac mini-class M4 32GB / H200 NVL server）、同一份模型（Qwen 3.6 35B-A3B / Google MedGemma 27B 醫療專用）、同一份 quant（Q4 / 4-bit MLX，盡量公平）、同一份四個醫療任務上跑實測：
+
+- **任務 A**：把一份 ~400 token 的英文 outpatient encounter note 整理成 SOAP-format 摘要
+- **任務 B**：給定 chief complaint + 主要 findings，列出前 5 個 differential diagnosis
+- **任務 C**：中文用藥諮詢——病人已用 Warfarin + Amiodarone + Atorvastatin + Metformin，新增 Erythromycin 的交互作用、監測項目、替代抗生素
+- **任務 D**：中文 ICD-10-CM 編碼——簡述偏頭痛病例，輸出最合適的 ICD-10 code
+
+每個 (硬體 × 模型 × 任務) 跑 1 次 warmup + 5 次正式 run，記錄 wall-clock e2e、TTFT、輸出字元數、輸出 hash（驗 deterministic）。每張結果都附 raw_runs.csv 的 run_id 可以追溯。
+
+---
+
+## 硬體成本假設（透明，可重算）
+
+我們把成本算式公開放出來，讀者可以用自己診所 / 醫院的實際數字替換：
+
+### Mac mini-class（本次以 MacBook Air M4 32GB 替代，Memory bandwidth 120 GB/s 與 Mac mini M4 base 一致）
+
+| 項目 | 數字 | 來源 |
+|---|---:|---|
+| 硬體 | NT$36,900 | Apple TW 2026-05 list |
+| 攤提年限 | 5 年 | 醫材常用 |
+| 年使用工時 | 2,000 hr/y | 工作日 8h × 250 d |
+| 推理時平均功耗 | 30 W | M4 sustained inference |
+| 電費 | NT$3.0 / kWh | 台電住宅一般 |
+| PUE / 機房 overhead | 0 | 醫師桌邊使用 |
+| **每小時硬體成本** | NT$3.69 | 36900 / 5 / 2000 |
+| **每小時電費** | NT$0.09 | 30 W × 3 / 1000 |
+| **總每小時成本** | NT$3.78 | |
+
+### H200 NVL Server（含 1 卡 + 雙 EPYC server，不含網路 / 儲存擴充）
+
+| 項目 | 數字 | 來源 |
+|---|---:|---|
+| 硬體 | NT$1,500,000 | 2026 中華區 H200 NVL ~NT$950k + server NT$550k |
+| 攤提年限 | 5 年 | 同上 |
+| 年使用工時 | 8,760 hr/y | 24/7 server |
+| 推理時平均功耗 | 1,500 W | H200 ~700W + server CPU + RAM |
+| 電費 | NT$3.0 / kWh | 同上 |
+| PUE | 1.4 | 一般機房 cooling overhead |
+| **每小時硬體成本** | NT$34.25 | 1500000 / 5 / 8760 |
+| **每小時電費 + cooling** | NT$6.30 | 1.5 × 3 × 1.4 |
+| **總每小時成本** | NT$40.55 | |
+
+> **倍數差**：H200 server 每小時 NT$40.55，Mac mini class 每小時 NT$3.78——**11 倍**。 但 Mac 在 24/7 算法下會更便宜（因為它是按 active hour 攤提），24/7 算法的差距會更大。我們文章採用「醫師工時」攤提的 Mac，是對 H200 比較有利的算法——讀者要記得這點。
+
+---
+
+## 模型矩陣
+
+| 模型 | Mac 端 | H200 端 |
+|---|---|---|
+| Qwen 3.6 35B-A3B (general-purpose) | `mlx-community/Qwen3.6-35B-A3B-4bit` 透過 Rapid-MLX `--no-thinking` | `Qwen3.6-35B-A3B-UD-Q4_K_M.gguf` 透過 llama.cpp `--reasoning off` |
+| MedGemma 27B-text-it (醫療專用) | `mlx-community/medgemma-27b-text-it-4bit` 透過 Rapid-MLX | `unsloth/medgemma-27b-text-it-Q4_K_M.gguf` 透過 llama.cpp |
+
+兩邊都鎖：
+- temperature = 0
+- 同一份 prompt 文字
+- 同樣的 4-bit / Q4_K_M quant 等級
+- 同一份 streaming OpenAI-compatible API 的量法
+
+---
+
+## 實測結果
+
+### 任務 A：SOAP 摘要（英文）
+
+_pending — Mac qwen3.6 跑完後填_
+
+### 任務 B：DDx 推理（英文）
+
+_pending_
+
+### 任務 C：用藥諮詢（中文）
+
+_pending_
+
+### 任務 D：ICD-10 編碼（中文）
+
+_pending_
+
+### 圖 1：四個任務的 wall-clock e2e
+
+_(figure: 01_e2e_per_task.png)_
+
+### 圖 2：四個任務的單次推理成本
+
+_(figure: 02_cost_per_task.png)_
+
+### 圖 3：成本 × 速度二維分佈
+
+_(figure: 03_cost_vs_e2e_2d.png)_
+
+### 圖 4：H200 要服務幾個並行使用者，per-task 成本才會比 Mac mini 低？
+
+_(figure: 04_break_even_concurrency.png)_
+
+### 圖 5：兩端輸出長度是否一致（同 prompt + 同 quant 是否輸出可比）
+
+_(figure: 05_output_size_consistency.png)_
+
+---
+
+## 結論：你應該買 Mac mini 還是 H200？
+
+> _結論依實測填寫_
+
+### 一人診所 / 個人工作站（≤ 1 並行使用者）
+_pending_
+
+### 中型醫院 / 同時 ~3-10 醫師（並行 3-10 使用者）
+_pending_
+
+### 教學醫院 / 區域醫院（並行 ≥ 10）
+_pending_
+
+---
+
+## 限制與透明度
+
+- 本次實機是 MacBook Air M4 32GB（Memory bandwidth 120 GB/s）作為 Mac mini M4 base / Mac mini M4 24GB 的代理（兩者 bandwidth 一致；M4 Pro 273 GB/s 的 Mac mini 將跑得更快，未測）
+- H200 端用 llama.cpp Q4_K_M (apples-to-apples quant) 而非 vLLM BF16；後者 throughput 應更高，但對「single-user CP 值」這個論述影響有限——讀者若需 batch throughput 比較請額外測 vLLM
+- 醫療 task 的 quality 我們只看 deterministic + 字元長度，沒有臨床醫師雙盲評分；意思是「速度誰快、成本誰低」可信，但「**輸出對不對**」是另一個課題
+- 成本算式採取台灣 2026-05 list price + 一般機房 PUE 1.4——讀者用 colocation / 大型部署時數字不同
+- 4-bit quant 對 medical 任務的潛在 hallucination 影響本文未獨立研究——醫療場景應視為「需臨床醫師覆核」
+
+---
+
+## 可重現性
+
+- 完整 raw logs：`/data/txtner-bench/madgaa-bench/v2/raw_logs/{h200,mac}/*.jsonl`
+- 聚合資料：`results/raw_runs.csv` / `per_task_metrics.csv` / `cost_per_task.csv`
+- 圖表：`figures/01_*.png` 至 `figures/05_*.png`
+- 跑分腳本：`scripts/bench_medical.py` / `compute_cost_per_task.py` / `plot_v2.py`
+- prompts：`prompts/task_A_soap_en.txt` 等四個檔案
+
+每一個成本數字都對應 `cost_per_task.csv` 中的一個 row。所有假設（硬體價、攤提年、活躍工時、功耗、電費、PUE）都列在表格中——換成你的實際數字，跑一次 `compute_cost_per_task.py` 就會得到你自己的成本。

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.swp
+.venv/
+*.tar.gz
+article/article_filled*.md

@@ -1,0 +1,7 @@
+You are a clinical scribe assistant. Convert the following de-identified outpatient encounter note into a SOAP-format summary. Use these section headers in order: "Subjective:", "Objective:", "Assessment:", "Plan:". Keep each section concise (≤4 short sentences) and faithful to the input — do not invent data.
+
+Encounter (de-identified):
+
+A 58-year-old woman presents to the family medicine clinic for a 3-week history of progressively worsening exertional dyspnea and intermittent palpitations. She denies chest pain, syncope, orthopnea or paroxysmal nocturnal dyspnea. Past medical history is significant for hypertension (on amlodipine 5 mg daily), type 2 diabetes mellitus (HbA1c 7.4 % four months ago, on metformin 1000 mg BID) and hyperlipidemia (on atorvastatin 20 mg nightly). She has a 22 pack-year smoking history, quit 3 years ago. Family history: father had myocardial infarction at age 67. Vitals today: BP 148/92, HR 102 irregular, RR 18, SpO2 96 % on room air, BMI 31. On exam she appears well, no respiratory distress at rest. Cardiac auscultation reveals an irregularly irregular rhythm with no murmurs. Lungs are clear bilaterally. There is trace pretibial pitting edema bilaterally. ECG performed in clinic shows atrial fibrillation with a ventricular rate of 98 and no acute ischemic changes. Point-of-care BNP is 312 pg/mL. The patient has not started any new medications and reports good adherence.
+
+Output the SOAP summary directly with no preamble.

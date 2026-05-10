@@ -1,0 +1,17 @@
+You are a clinical reasoning assistant. Given the chief complaint and key findings below, provide a structured differential diagnosis. Output exactly 5 candidates, ordered by clinical likelihood (most likely first). For each candidate use this format on a single line:
+
+  N. <Diagnosis name> — <one-sentence reason citing the relevant findings>
+
+Do not output anything besides those 5 numbered lines.
+
+Chief complaint: 67-year-old man with acute-onset central chest pain radiating to the left jaw, lasting 40 minutes, associated with diaphoresis and dyspnea, occurring at rest.
+
+Key findings:
+- Past medical history: hypertension, type 2 diabetes, current smoker, hyperlipidemia
+- Vitals: BP 158/96, HR 104, RR 20, SpO2 95 % on room air, afebrile
+- Physical: anxious appearance, S4 gallop on auscultation, no murmurs, no rub, lungs clear, no leg swelling
+- ECG: 1 mm ST-segment depression in leads V4–V6 with T-wave inversion; no Q waves
+- Bedside troponin I: 0.18 ng/mL (upper normal limit 0.04)
+- Chest X-ray: no acute infiltrate, no widened mediastinum
+
+Output now (5 lines only).
