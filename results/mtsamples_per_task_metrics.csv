@@ -1,0 +1,5 @@
+hardware,model,task_id,n_prompts,n_runs,e2e_p50,e2e_p95,e2e_mean,e2e_std,e2e_ci_lo,e2e_ci_hi,ttft_p50,output_chars_mean,deterministic_per_prompt
+h200-nvl,medgemma-27b-text-it,ddx_en,30,150,4.8623,5.8100,4.7745,0.7485,4.7896,4.9587,0.0962,996,True
+h200-nvl,medgemma-27b-text-it,soap_en,30,150,7.0285,11.5451,7.3183,2.0213,6.5249,7.3789,0.1186,1236,True
+h200-nvl,qwen3.6-35b-a3b,ddx_en,30,150,5.2651,6.6078,4.6960,1.7933,4.9361,5.5081,0.1477,1000,True
+h200-nvl,qwen3.6-35b-a3b,soap_en,30,152,6.5891,11.0032,7.3298,2.3647,6.2200,7.8462,0.1976,1338,True

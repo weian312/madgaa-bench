@@ -1,0 +1,5 @@
+hardware,model,task_id,n_prompts,n_runs,e2e_p50,ntd_per_task,ntd_per_task_ci_lo,ntd_per_task_ci_hi
+h200-nvl,medgemma-27b-text-it,ddx_en,30,150,4.8623,0.05476,0.05395,0.05585
+h200-nvl,medgemma-27b-text-it,soap_en,30,150,7.0285,0.07916,0.07349,0.08311
+h200-nvl,qwen3.6-35b-a3b,ddx_en,30,150,5.2651,0.05930,0.05560,0.06204
+h200-nvl,qwen3.6-35b-a3b,soap_en,30,152,6.5891,0.07421,0.07006,0.08837
