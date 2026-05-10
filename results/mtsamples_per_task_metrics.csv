@@ -1,5 +1,11 @@
 hardware,model,task_id,n_prompts,n_runs,e2e_p50,e2e_p95,e2e_mean,e2e_std,e2e_ci_lo,e2e_ci_hi,ttft_p50,output_chars_mean,deterministic_per_prompt
+h200-nvl,gemma-4-E4B-it,ddx_en,30,300,15.0929,19.5759,15.2161,2.4846,14.6649,15.3826,0.2980,780,False
+h200-nvl,gemma-4-E4B-it,soap_en,30,301,14.8700,28.5330,15.6811,6.0275,13.9826,15.4411,0.3237,954,False
 h200-nvl,medgemma-27b-text-it,ddx_en,30,150,4.8623,5.8100,4.7745,0.7485,4.7896,4.9587,0.0962,996,True
 h200-nvl,medgemma-27b-text-it,soap_en,30,150,7.0285,11.5451,7.3183,2.0213,6.5249,7.3789,0.1186,1236,True
 h200-nvl,qwen3.6-35b-a3b,ddx_en,30,150,5.2651,6.6078,4.6960,1.7933,4.9361,5.5081,0.1477,1000,True
 h200-nvl,qwen3.6-35b-a3b,soap_en,30,152,6.5891,11.0032,7.3298,2.3647,6.2200,7.8462,0.1976,1338,True
+macmini-m4-pro-48gb,mlx-community/Qwen3.6-35B-A3B-4bit,ddx_en,30,150,10.1767,14.6129,10.1764,2.4257,9.6652,10.7285,0.6906,960,True
+macmini-m4-pro-48gb,mlx-community/Qwen3.6-35B-A3B-4bit,soap_en,30,150,16.2653,30.6316,17.4835,7.3264,15.2983,17.8658,0.7164,1271,True
+macmini-m4-pro-48gb,mlx-community/gemma-4-26b-a4b-it-4bit,ddx_en,21,105,24.4607,40.8957,25.1193,7.6815,21.6918,25.8304,,0,True
+macmini-m4-pro-48gb,mlx-community/gemma-4-26b-a4b-it-4bit,soap_en,30,150,46.8920,53.8908,40.9023,12.0878,32.9595,51.0018,,0,True
